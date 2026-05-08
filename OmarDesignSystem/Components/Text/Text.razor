@@ -1,0 +1,43 @@
+﻿@namespace OmarDesignSystem
+
+@if(TextType == TextType.Body)
+{
+    <BodyText AdditionalAttributes="AdditionalAttributes">
+        @ChildContent
+    </BodyText>
+}
+else if(TextType == TextType.SectionHeading)
+{
+    <SectionHeading AdditionalAttributes="AdditionalAttributes">
+        @ChildContent
+    </SectionHeading>
+}
+else if (TextType == TextType.SubHeading)
+{
+    <SubHeading AdditionalAttributes="AdditionalAttributes">
+        @ChildContent
+    </SubHeading>
+}
+else if(TextType == TextType.MainHeading)
+{
+    <MainHeading AdditionalAttributes="AdditionalAttributes">
+        @ChildContent
+    </MainHeading>
+}
+else
+{
+    <MudText AdditionalAttributes="AdditionalAttributes">
+        @ChildContent
+    </MudText>
+}
+
+@code {
+    [Parameter]
+    public TextType TextType{ get; set; }
+
+    [Parameter]
+    public RenderFragment ChildContent { get; set; } = null!;
+
+    [Parameter(CaptureUnmatchedValues = true)]
+    public Dictionary<string, object> AdditionalAttributes { get; set; } = new();
+}

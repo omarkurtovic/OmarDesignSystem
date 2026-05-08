@@ -1,0 +1,13 @@
+﻿@namespace OmarDesignSystem
+
+<MudText Typo="Typo.h6" @attributes="AdditionalAttributes">
+    @ChildContent
+</MudText>
+
+@code {
+    [Parameter]
+    public RenderFragment ChildContent { get; set; } = null!;
+
+    [Parameter(CaptureUnmatchedValues = true)]
+    public Dictionary<string, object> AdditionalAttributes { get; set; } = new();
+}

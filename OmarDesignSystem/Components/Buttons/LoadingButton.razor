@@ -1,0 +1,45 @@
+﻿@namespace OmarDesignSystem
+<MudButton OnClick="HandleClickAsync"
+           @attributes="AdditionalAttributes"
+           Style="@(IsLoading ? "pointer-events: none;" : "")">
+    @if (IsLoading)
+    {
+        <MudStack Row="true" Spacing="2" AlignItems="AlignItems.Center" Justify="Justify.Center">
+            @* Hardcoding Color.Surface ensures the spinner stays white/visible against your primary colored buttons *@
+            <MudProgressCircular Size="Size.Small" Indeterminate="true" Color="MudBlazor.Color.Surface" />
+            <MudText>@LoadingText</MudText>
+        </MudStack>
+    }
+    else
+    {
+        @ChildContent
+    }
+</MudButton>
+
+@code {
+    public bool IsLoading { get; set; }
+
+    [Parameter] public EventCallback OnClick { get; set; }
+    
+    [Parameter] public RenderFragment ChildContent { get; set; }
+    
+    [Parameter] public string LoadingText { get; set; } = "Saving...";
+
+    [Parameter(CaptureUnmatchedValues = true)]
+    public Dictionary<string, object> AdditionalAttributes { get; set; } = new();
+
+    private async Task HandleClickAsync()
+    {
+        if (IsLoading) return;
+
+        IsLoading = true;
+        try
+        {
+            await OnClick.InvokeAsync();
+        }
+        finally
+        {
+            IsLoading = false;
+        }
+    }
+}
