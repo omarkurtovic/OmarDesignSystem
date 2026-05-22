@@ -4,6 +4,12 @@
     <TargetFramework>net10.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+	  <PackageId>Omar.OmarDesignSystem</PackageId>
+	  <Version>1.0.0</Version>
+	  <Authors>Omar Kurtovic</Authors>
+	  <Company>Omar Kurtovic</Company>
+	  <Description>Shared MD3 UI components for my portfolio projects.</Description>
+	  <RepositoryUrl>https://github.com/omarkurtovic/OmarDesignSystem</RepositoryUrl>
   </PropertyGroup>
 
 
