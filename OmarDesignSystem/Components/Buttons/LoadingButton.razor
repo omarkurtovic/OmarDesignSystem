@@ -1,7 +1,7 @@
 ﻿@namespace OmarDesignSystem
 <MudButton OnClick="HandleClickAsync"
            @attributes="AdditionalAttributes"
-           Style="@(IsLoading ? "pointer-events: none;" : "")">
+           Disabled="@IsLoading">
     @if (IsLoading)
     {
         <MudStack Row="true" Spacing="2" AlignItems="AlignItems.Center" Justify="Justify.Center">
