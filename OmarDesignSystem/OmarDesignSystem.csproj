@@ -1,19 +1,32 @@
-<Project Sdk="Microsoft.NET.Sdk.Razor">
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
 
-  <PropertyGroup>
-    <TargetFramework>net10.0</TargetFramework>
-    <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net10.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<IsPackable>true</IsPackable>
+		
+		<PackageId>OmarDesignSystem</PackageId>
+		<Version>1.0.1</Version>
+		<Authors>Omar Kurtovic</Authors>
+		<Description>Shared MD3 UI components for my portfolio projects.</Description>
+		<RepositoryUrl>https://github.com/omarkurtovic/OmarDesignSystem</RepositoryUrl>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <Content Include="NugetSetup.md" />
+	</ItemGroup>
 
 
-  <ItemGroup>
-    <SupportedPlatform Include="browser" />
-  </ItemGroup>
+	<ItemGroup>
+		<SupportedPlatform Include="browser" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="10.0.7" />
-    <PackageReference Include="MudBlazor" Version="9.4.0" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="10.0.8" />
+		<PackageReference Include="MudBlazor" Version="9.4.0" />
+	</ItemGroup>
 
 </Project>
