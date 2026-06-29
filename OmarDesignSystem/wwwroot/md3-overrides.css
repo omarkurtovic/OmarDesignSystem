@@ -1,4 +1,4 @@
-﻿.mud-card {
+﻿.    {
     transition: box-shadow 0.2s ease-in-out !important;
 }
 
@@ -31,7 +31,3 @@
     .mud-navmenu.mud-navmenu-default .mud-nav-link.active:not(.mud-nav-link-disabled) svg {
         color: var(--mud-palette-secondary-text) !important;
     }
-
-.mud-drawer {
-    color: var(--mud-palette-text-primary) !important;
-}
