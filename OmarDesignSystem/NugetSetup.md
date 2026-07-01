@@ -21,10 +21,8 @@ Generate the token and copy it immediately (you will never see it again).
 Tell your computer about GitHub Packages
 dotnet nuget add source "https://nuget.pkg.github.com/YOUR_USERNAME/index.json" --name "github" --username "YOUR_USERNAME" --password "YOUR_PAT" --store-password-in-clear-text
 
-
-Pack and Push!
+delete obj, bin
+dotnet clean
+dotnet build --configuration Release
 dotnet pack --configuration Release --force
-
-
-Push to GitHub
-dotnet nuget push "bin/Release/*.nupkg" --source "github" --api-key YOUR_PAT
+dotnet nuget push ".\bin\Release\*.nupkg" --source "github" --api-key YOUR_PAT

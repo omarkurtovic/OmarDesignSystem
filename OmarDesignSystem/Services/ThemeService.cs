@@ -8,7 +8,7 @@ namespace OmarDesignSystem
         {
             LayoutProperties = new LayoutProperties()
             {
-                DefaultBorderRadius = "12px"
+                DefaultBorderRadius = "12px",
             },
             PaletteLight = new PaletteLight()
             {
@@ -24,6 +24,8 @@ namespace OmarDesignSystem
 
                 TextPrimary = "#0F172A",
                 TextSecondary = "#475569",
+
+                DrawerText = "#000000"
             },
             PaletteDark = new PaletteDark()
             {
@@ -38,7 +40,9 @@ namespace OmarDesignSystem
                 AppbarBackground = "#0F172A",
 
                 TextPrimary = "#F8FAFC",
-                TextSecondary = "#94A3B8"
+                TextSecondary = "#94A3B8", 
+
+                DrawerText = "#FFFFFF"
             },
 
             Typography = new Typography()
